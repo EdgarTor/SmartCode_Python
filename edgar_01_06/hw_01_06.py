@@ -44,11 +44,32 @@ class Triangle:
             return "Scalene triangle"
 
         
-t = Triangle(7, 8, 9)
-print(t.get_sides())
-print(t.get_perimeter())
-print(t.get_area())
-print(t.get_type())
+# t = Triangle(7, 8, 9)
+# print(t.get_sides())
+# print(t.get_perimeter())
+# print(t.get_area())
+# print(t.get_type())
 
+class Vector:
+    MIN_VALUE = 0
+    MAX_VALUE = 100
 
+    def __init__(self, x: int, y: int):
+        if self.validate(x, y):
+            self.x = x
+            self.y = y
+        else:
+            raise Exception("Butut")
     
+    @staticmethod
+    def validate(x, y):
+        if 0 < x < 100 and 0 < y < 100:
+            return True
+        else:
+            return False
+
+v = Vector(1, 2)
+v.validate()
+
+
+
